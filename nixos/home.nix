@@ -108,10 +108,10 @@
       gapless_monocle = true;
     };
     startupPrograms = [
-      "bspc monitor -d home dev web util mus"  # Initialize workspaces
-      "feh --bg-fill ./am.png"  # Set wallpaper
-      "xss-lock -- slock"                     # Start screen locker
-      "dunst"                                 # Start notification daemon
+      "bspc monitor -d home dev web util mus"    # Initialize workspaces
+      "feh --bg-fill ../wallpapers/default.png"  # Set wallpaper
+      "xss-lock -- slock"                        # Start screen locker
+      "dunst"                                    # Start notification daemon
     ];
   };
 
