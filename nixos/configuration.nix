@@ -46,12 +46,15 @@
     
     # Disable default display manager
     displayManager.lightdm.enable = false;
-  };
 
-  # Enable ly display manager
-  services.ly = {
-    enable = true;
-    animation = true;  # Enable matrix animation
-    defaultUser = "ryan";
+    # Configure ly display manager
+    displayManager = {
+      ly = {
+        enable = true;
+        defaultUser = "ryan";
+      };
+      # Make sure to disable lightdm
+      lightdm.enable = false;
+    };
   };
 }
