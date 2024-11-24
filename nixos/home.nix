@@ -22,24 +22,6 @@
     flameshot     # Screenshot tool
   ];
 
-  # BSPWM configuration
-  xsession.windowManager.bspwm = {
-    enable = true;
-    settings = {
-      border_width = 2;
-      window_gap = 12;
-      split_ratio = 0.52;
-      borderless_monocle = true;
-      gapless_monocle = true;
-    };
-    startupPrograms = [
-      "bspc monitor -d home dev web util mus"    # Initialize workspaces
-      "feh --bg-fill ../wallpapers/default.png"  # Set wallpaper
-      "xss-lock -- slock"                        # Start screen locker
-      "dunst"                                    # Start notification daemon
-    ];
-  };
-
   # Fish shell configuration
   programs.fish = {
     enable = true;
