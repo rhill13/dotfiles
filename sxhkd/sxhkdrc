@@ -1,0 +1,11 @@
+# Terminal
+super + Return
+    kitty
+    
+# Application launcher
+super + @space
+    dmenu_run
+    
+# Kill window
+super + q 
+  bspc node -k
