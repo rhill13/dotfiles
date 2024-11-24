@@ -45,16 +45,6 @@
     windowManager.bspwm.enable = true;
     
     # Disable default display manager
-    displayManager.lightdm.enable = false;
-
-    # Configure ly display manager
-    displayManager = {
-      ly = {
-        enable = true;
-        defaultUser = "ryan";
-      };
-      # Make sure to disable lightdm
-      lightdm.enable = false;
-    };
+    displayManager.lightdm.enable = true;
   };
 }
