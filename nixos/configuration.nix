@@ -14,11 +14,23 @@
 
   # System packages
   environment.systemPackages = with pkgs; [
+    fish
     neovim
     git
     wget
     curl
-    ly
+    firefox
+    # BSPWM related packages
+    sxhkd         # Simple X hotkey daemon - required for BSPWM
+    dmenu         # Application launcher
+    polybar       # Status bar
+    feh           # Image viewer and wallpaper setter
+    dunst         # Notification daemon
+    xss-lock      # X screen saver lock
+    slock         # Simple X display locker
+    pcmanfm       # File manager
+    xclip         # Clipboard manager
+    flameshot     # Screenshot tool
   ];
 
   # User account
