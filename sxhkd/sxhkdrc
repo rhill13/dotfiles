@@ -9,3 +9,15 @@ super + @space
 # Kill window
 super + q 
   bspc node -k
+
+# Workspace switching
+super + 1
+    bspc desktop -f home
+super + 2
+    bspc desktop -f dev
+super + 3
+    bspc desktop -f web
+super + 4
+    bspc desktop -f util
+super + 5
+    bspc desktop -f mus
