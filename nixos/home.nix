@@ -128,67 +128,11 @@
     };
   };
 
-  # SXHKD configuration for BSPWM
-  services.sxhkd = {
-    enable = true;
-    keybindings = {
-      # Terminal
-      "super + Return" = "kitty";
-      # Application launcher
-      "super + space" = "dmenu_run";
-      # File manager
-      "super + e" = "pcmanfm";
-      # Screenshot
-      "Print" = "flameshot gui";
-      # Kill window
-      "super + q" = "bspc node -k";
-      # Toggle monocle layout
-      "super + m" = "bspc desktop -l next";
-      # Lock screen
-      "super + l" = "slock";
-
-      # Workspace switching
-      "super + {1-5}" = "bspc desktop -f {home,dev,web,util,mus}";
-      # Move windows to workspaces
-      "super + shift + {1-5}" = "bspc node -d {home,dev,web,util,mus}";
-    };
-  };
-
-  # Neovim configuration
-  programs.neovim = {
-    enable = true;
-    viAlias = true;
-    vimAlias = true;
-  };
-
   # Git configuration
   programs.git = {
     enable = true;
     userName = "rhill13";
     userEmail = "ryanhill1128@gmail.com";
   };
-
-  # Add both .xsession and .xinitrc
-  home.file = {
-    ".xsession" = {
-      executable = true;
-      text = ''
-        # Start sxhkd
-        ${pkgs.sxhkd}/bin/sxhkd &
-
-        # Start bspwm
-        exec ${pkgs.bspwm}/bin/bspwm
-      '';
-    };
-    ".xinitrc" = {
-      executable = true;
-      text = ''
-        # Start sxhkd
-        ${pkgs.sxhkd}/bin/sxhkd &
-
-        # Start bspwm
-        exec ${pkgs.bspwm}/bin/bspwm
-      '';
-    };
-  };
+  
 }

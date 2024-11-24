@@ -24,7 +24,7 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      nixosConfigurations.thinkpad = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.ryan = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
           ./configuration.nix
