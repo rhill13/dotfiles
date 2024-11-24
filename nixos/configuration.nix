@@ -41,10 +41,8 @@
     enable = true;
     layout = "us";
     libinput.enable = true;  # Enable touchpad support
-    
-    windowManager.bspwm.enable = true;
-    
-    # Disable default display manager
     displayManager.lightdm.enable = true;
+    displayManager.defaultSession = "none+bspwm";
+    windowManager.bspwm.enable = true;
   };
 }
