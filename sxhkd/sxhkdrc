@@ -10,6 +10,10 @@ super + @space
 super + q 
   bspc node -k
 
+# Lock screen
+super + l
+    slock
+
 # Workspace switching
 super + 1
     bspc desktop -f home
